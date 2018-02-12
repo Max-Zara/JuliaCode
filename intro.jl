@@ -65,3 +65,106 @@ println(ismatch(email_pattern,input))
 email_pattern = r"(.+)@(.+)"
 m = match(email_pattern, input)
 println(m.captures)
+
+for i in 1:2:9
+    print(i)
+end
+
+a= split("A,B,C,D",",")
+typeof(a)
+show(a)
+
+arr = [100,25,37]
+show(arr)
+arr2 = Array(Int64,5)
+show(arr2)
+
+arr3 = Float64[]
+#push populates the array
+push!(arr3,2)
+show(arr3)
+
+arr4 = Int64([1:7])
+push!(arr4,9)
+show(arr4)
+
+sizehint(arr2)
+ndims(arr2)
+
+join(arr4,", ")
+eqa = linspace(0,10,5)
+show(eqa)
+
+v1 = rand(Int32,5)
+Int64(v1)
+
+b=Array(1:7);c = [100,200,300]
+append!(b,c)
+
+pop!(b) #take one element at the end
+push!(b,42) #add one element to end
+
+shift!(b) #takes form front
+unshift!(b,42) #adds one from front
+
+##check whether element in array
+in(42,b)
+in(43,b)
+
+sort(b)
+
+a1=Array(1:3); a2 = Array(4:6)
+
+a1 .* a2 #multiply respective rows
+dot(a1,a2)  ##dot product
+
+a= [1,2,4,6]
+a1 = a
+show(a1)
+a[4]=0
+
+start_time = time()
+time_elapsed = time() - start_time
+println("Time elapsed: $time_elapsed")
+
+using Dates
+strftime(time())
+
+d = Date(2014,9,1)
+dt = DateTime(2014,9,1,12,30,59,1)
+
+x=1.0
+x=1
+
+function scopetest()
+    println(x)
+    y::Float64 = 1.0
+end
+
+scopetest()
+println(y)
+
+x = begin
+    a=5
+    2*a
+end
+
+x
+
+x=(a=5;2*a)
+
+#For fixing items specify const - will give warning when changed
+const GC = 6.67e-11
+
+GC = 3.14
+
+str = "The Gold and Blue Loses a Bit of its Luster"
+println(str)
+nchars = length(str)
+println("The headline counts $nchars characters")
+str2 = replace(str, "Blue","Red")
+
+arr=Array(1:100)
+sum(arr)
+mean(arr)
+std(arr)
