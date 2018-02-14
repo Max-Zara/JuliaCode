@@ -42,7 +42,7 @@ Pkg.build("PyCall")
 using PyPlot
 PyPlot.svg(true) #scalable vector graphics true
 x=[1:100]
-y = [i^2 for i in x]
+#y = [i^2 for i in x]
 y = [301:400]
 
 p=plot(x,y)
